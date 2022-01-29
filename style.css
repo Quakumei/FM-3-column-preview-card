@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    /* typography */
+    --family-bold: 'Big Shoulders Display', cursive;
+    --family-normal: 'Lexend Deca', sans-serif;
+    --fs-base: 15px;
+
+    /* colors */
+    --orange: hsl(31, 77%, 52%);
+    --cyan-700: hsl(184, 100%, 22%);
+    --cyan-800: hsl(179, 100%, 13%);
+
+    --white: hsla(0, 0%, 100%, 0.75);
+    --gray: hsl(0, 0%, 95%);
+
+    /* borders */
+    --radii: 0.5rem;
+    --radii-button: calc(2rem + 15px) ;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+
+    font-size: var(--fs-base);
+    font-family: var(--family-normal);
+    background-color: var(--gray);
+}
+
+main{ 
+    margin: 6rem 0;
+
+    width:100%;
+    height:100%;
+    max-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+/* Orange card */
+.car-card:first-child {
+    border-radius: var(--radii) var(--radii) 0 0;
+    background-color: var(--orange);
+}
+
+.car-card:first-child .car-card__button__title {
+    color: var(--orange);
+}
+
+/* Cyan card */
+.car-card:nth-child(2) {
+    background-color: var(--cyan-700);
+}
+
+.car-card:nth-child(2) .car-card__button__title {
+    color: var(--cyan-700);
+}
+
+
+/* Dark cyan card */
+.car-card:last-child {
+    border-radius: 0 0 var(--radii) var(--radii);
+    background-color: var(--cyan-800);
+}
+
+.car-card:last-child .car-card__button__title {
+    color: var(--cyan-800);
+}
+
+
+
+.car-card {
+    max-width:305px;
+    padding: 2.5rem;
+}
+
+.car-card__description {
+    margin-bottom: 1.5rem ;
+
+    color: var(--white);
+    line-height: 1.75;
+}
+
+.car-card__title {
+    color: var(--gray);
+
+    margin: 2rem 0;
+    font-size: calc(var(--fs-base)*2.5);
+    font-family: var(--family-bold);
+    text-transform: uppercase;
+}
+
+.car-card__button {
+    display: block;
+    background-color: var(--gray);
+    padding: 0.75rem 2rem;
+    width:fit-content;
+    text-align: center;
+    border-radius: var(--radii-button);
+    outline: 2px solid var(--gray);
+    transition: all 0.3s ease-in-out;
+}
+
+.car-card__button:hover {
+    outline: 2px solid var(--gray);
+    background-color: transparent;
+    cursor:pointer;
+}
+
+.car-card__button:hover .car-card__button__title {
+    color: var(--gray);
+}
+
+.car-card__button__title {
+    transition: color 0.3s ease-in-out;
+}
+
+
+@media only screen and (min-width:915px) {
+    body {
+        height: 100vh;
+    }
+    main {
+        margin: 0;
+        flex-direction: row;
+    }
+
+    .car-card:last-child {
+        border-radius: 0 var(--radii) var(--radii) 0;
+    }
+
+    .car-card:first-child {
+        border-radius:  var(--radii) 0 0 var(--radii);
+    }
+
+    .car-card__description {
+        margin-bottom: 6rem;
+    }
+}
+
