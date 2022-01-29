@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github URL](https://github.com/Quakumei/FM-3-column-preview-card)
+- Live Site URL: [Live site URL](https://fm-3-column-preview-card-quakumei.vercel.app/)
 
 ## My process
 
